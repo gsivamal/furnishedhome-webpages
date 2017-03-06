@@ -27,6 +27,10 @@ opacity:1;
 	opacity:0.5;
 }
 
+.home-name {
+	margin-top:70px;
+}
+
 .facilities {
 	display: block;
 	word-wrap: normal
