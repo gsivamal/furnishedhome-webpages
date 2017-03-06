@@ -64,51 +64,32 @@
                         <h1>BOOK NOW</h1>
                         <h3>Select home and check availability</h3>
                         <hr class="intro-divider">
-						<div class="row">
-							<div class="col-md-2">
-							</div>
-							<div class="col-md-3">
-								<div class="btn-group" style="margin-bottom: 16px;">
-								  <button type="button" class="btn btn-default btn-lg select-home-button">Select home...</button>
-								  <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									<span class="caret"></span>
-									<span class="sr-only">Toggle Dropdown</span>
-								  </button>
-								  <ul class="dropdown-menu">
-									<li><a>Name the Home, Address Home #1</a></li>
-									<li role="separator" class="divider"></li>
-									<li><a>Name the Home, Address Home #1</a></li>
-								  </ul>
-								</div>
-							</div>
-							<div class="col-md-2" id="arrival">
-								<div class="input-group input-lg date book-date">
-								  <input type="text" class="form-control input-lg" placeholder="Arrival">
-								  <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-								</div>
-							</div>
-							<script type="text/javascript">
-								$('#arrival .input-group.date').datepicker({
-									autoclose:true
-								});
-							</script>
-							<div class="col-md-2" id="departure">
-								<div class="input-group input-lg date book-date">
-								  <input type="text" class="form-control input-lg" placeholder="Departure">
-								  <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-								</div>
-							</div>
-							<script type="text/javascript">
-								$('#departure .input-group.date').datepicker({
-									autoclose:true
-								});
-							</script>
-                            <div class="col-md-1">
-                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-search fa-fw"></i> <span class="check-btn">Check</span></a>
-                            </div>
-							<div class="col-md-2">
-							</div>
+						<div class="btn-group">
+						  <button class="btn btn-default btn-lg dropdown-toggle" style="min-width:150px;" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+							<span data-bind="city-name">Select city...</span>&nbsp;<span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu">
+						   <li><a href="#">Dallas</a></li>
+						   <li><a href="#">Austin</a></li>
+						 </ul>
 						</div>
+						
+						<button onclick="check();" class="btn btn-default btn-lg"><i class="fa fa-search fa-fw"></i> <span class="check-btn">Check</span></button>
+						<script>
+						function check(){
+							if($( '[data-bind="city-name"]' ).text() != "Select city...") {
+								window.location = "list-"+$( '[data-bind="city-name"]' ).text().toLowerCase()+".html";
+							}
+						}
+						$( document.body ).on( 'click', '.dropdown-menu li', function( event ) {
+						  var $target = $( event.currentTarget );
+						  $target.closest( '.btn-group' )
+							 .find( '[data-bind="city-name"]' ).text( $target.text() )
+								.end()
+							 .children( '.dropdown-toggle' ).dropdown( 'toggle' );
+						  return false;
+					   });
+						</script>
                     </div>
                 </div>
             </div>
@@ -125,23 +106,6 @@
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">Amazing Home In Dallas #1</h2>
-                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur corporis at explicabo nulla dolore necessitatibus doloremque exercitationem sequi dolorem architecto perferendis quas aperiam debitis dolor soluta!</p>
-					<a class="btn btn-success btn-lg" href="details.html" target="_blank">View more</a>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/house.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-	
-	<div class="content-section-a post-left">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Amazing Home In Dallas #2</h2>
                     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur corporis at explicabo nulla dolore necessitatibus doloremque exercitationem sequi dolorem architecto perferendis quas aperiam debitis dolor soluta!</p>
 					<a class="btn btn-success btn-lg" href="details.html" target="_blank">View more</a>
                 </div>
