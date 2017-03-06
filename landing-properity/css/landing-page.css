@@ -14,14 +14,63 @@ h6 {
     font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
-.book-date {
-	width:150px
+
+.hidden-animate{
+opacity:0;
 }
 
-.list-inline {
-	display: flex;
-	margin-left: 20%;
+.visible-animate{
+opacity:1;
 }
+
+.selected img {
+	opacity:0.5;
+}
+
+.facilities {
+	display: block;
+	word-wrap: normal
+}
+
+#slider-thumbs {
+	margin: 7px;
+}
+
+.book-date {
+	max-width:250px;
+	margin: auto;
+	margin-bottom: 16px;
+}
+.select-home-button {
+	width: 200px;
+}
+.date input {
+	font: initial;
+	font-family: Arial;
+}
+
+.input-lg {
+	padding-top: 0;
+    padding-bottom: 0;
+}
+
+#arrival {
+	padding:0;
+}
+
+#departure {
+	padding:0;
+}
+
+.btn-group>.btn-lg+.dropdown-toggle {
+    padding-right: 14px;
+    padding-left: 14px;
+}
+
+.input-group-addon {
+	border-radius: 6px;
+}
+
 .topnav {
     font-size: 14px; 
 }
@@ -29,6 +78,11 @@ h6 {
 .lead {
     font-size: 18px;
     font-weight: 400;
+}
+
+.navbar-default {
+	padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .intro-header {
@@ -96,6 +150,7 @@ h6 {
 .content-section-a {
     padding: 50px 0;
     background-color: #f8f8f8;
+	border-bottom: 1px solid #e7e7e7;
 }
 
 .content-section-b {
