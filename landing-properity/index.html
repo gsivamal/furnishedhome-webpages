@@ -15,21 +15,20 @@
     <link href="css/landing-page.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href="css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
+	<link href="css/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css">
+	<link href="css/animate.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 	
 	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/moment-with-locales.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
+	<script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script>
+	
+	
 </head>
 
 <body>
-
-    <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
         <div class="container topnav">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -39,7 +38,6 @@
                 </button>
                 <img src="img/logo.png" alt="Furnished Dallas Home For Rent" />
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
@@ -53,96 +51,247 @@
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
     </nav>
 
-
-    <!-- Header -->
     <a name="about"></a>
-    <div class="intro-header">
+    <div class="intro-header post">
         <div class="container">
 
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-md-12">
                     <div class="intro-message">
                         <h1>BOOK NOW</h1>
                         <h3>Select home and check availability</h3>
                         <hr class="intro-divider">
-                        <ul class="list-inline intro-check-controls">
-							<li>
-								<div class="btn-group">
-								  <button type="button" style="width:200px;" class="btn btn-default btn-lg">Select home...</button>
+						<div class="row">
+							<div class="col-md-2">
+							</div>
+							<div class="col-md-3">
+								<div class="btn-group" style="margin-bottom: 16px;">
+								  <button type="button" class="btn btn-default btn-lg select-home-button">Select home...</button>
 								  <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									<span class="caret"></span>
 									<span class="sr-only">Toggle Dropdown</span>
 								  </button>
 								  <ul class="dropdown-menu">
-									<li><a href="#">Name the Home, Address Home #1</a></li>
+									<li><a>Name the Home, Address Home #1</a></li>
 									<li role="separator" class="divider"></li>
-									<li><a href="#">Name the Home, Address Home #1</a></li>
+									<li><a>Name the Home, Address Home #1</a></li>
 								  </ul>
 								</div>
-							</li>
-							<li>
-								<div class="input-group" style="width:180px;">
-								  <input type="text" class="input-lg form-control date" placeholder="Arrival">
-								  <span class="input-group-btn">
-									<button class="btn btn-default btn-lg" type="button" id="datetimepicker1"><span class="glyphicon glyphicon-calendar"></span></button>
-								  </span>
+							</div>
+							<div class="col-md-2" id="arrival">
+								<div class="input-group input-lg date book-date">
+								  <input type="text" class="form-control input-lg" placeholder="Arrival">
+								  <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
 								</div>
-							</li>
-							<li>
-								<div class="input-group" style="width:180px;">
-								  <input type="text" class="input-lg form-control date" placeholder="Departure">
-								  <span class="input-group-btn">
-									<button class="btn btn-default btn-lg" type="button" id="datetimepicker2"><span class="glyphicon glyphicon-calendar"></span></button>
-								  </span>
+							</div>
+							<script type="text/javascript">
+								$('#arrival .input-group.date').datepicker({
+									autoclose:true
+								});
+							</script>
+							<div class="col-md-2" id="departure">
+								<div class="input-group input-lg date book-date">
+								  <input type="text" class="form-control input-lg" placeholder="Departure">
+								  <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
 								</div>
-							</li>
-                            <li>
+							</div>
+							<script type="text/javascript">
+								$('#departure .input-group.date').datepicker({
+									autoclose:true
+								});
+							</script>
+                            <div class="col-md-1">
                                 <a href="#" class="btn btn-default btn-lg"><i class="fa fa-search fa-fw"></i> <span class="check-btn">Check</span></a>
-                            </li>
-                        </ul>
+                            </div>
+							<div class="col-md-2">
+							</div>
+						</div>
                     </div>
                 </div>
             </div>
-
         </div>
-        <!-- /.container -->
-
     </div>
-    <!-- /.intro-header -->
-
+	
     <!-- Page Content -->
 
 	<a  name="services"></a>
-    <div class="content-section-a">
-
+    <div class="content-section-a post-left">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-                    <h2 class="section-heading">Amazing Home In Dallas</h2>
+                    <h2 class="section-heading">Amazing Home In Dallas #1</h2>
                     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur corporis at explicabo nulla dolore necessitatibus doloremque exercitationem sequi dolorem architecto perferendis quas aperiam debitis dolor soluta!</p>
+					<button class="btn btn-success btn-lg" data-toggle="modal" data-target="#aboutHome1">View more</button>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
                     <img class="img-responsive" src="img/house.jpg" alt="">
                 </div>
             </div>
-
         </div>
-        <!-- /.container -->
-
     </div>
-    <!-- /.content-section-a -->
+	
+	<div class="modal fade" id="aboutHome1" tabindex="-1" role="dialog" aria-labelledby="aboutHome1label">
+	  <div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="myModalLabel">Amazing Home In Dallas #1</h4>
+		  </div>
+		  <div class="modal-body">
+				<div class="row">
+					<div class="col-md-8" id="carousel-bounding-box">
+						<div id="myCarousel" class="carousel slide">
+							<!-- main slider carousel items -->
+							<div class="carousel-inner">
+								<div class="active item" data-slide-number="0">
+									<img src="http://placehold.it/600x480&amp;text=one" class="img-responsive">
+								</div>
+								<div class="item" data-slide-number="1">
+								  <img src="http://placehold.it/600x480&amp;text=two" class="img-responsive">
+								</div>
+								<div class="item" data-slide-number="2">
+									<img src="http://placehold.it/600x480&amp;text=three" class="img-responsive">
+								</div>
+								<div class="item" data-slide-number="3">
+									<img src="http://placehold.it/600x480&amp;text=four" class="img-responsive">
+								</div>
+								<div class="item" data-slide-number="4">
+									<img src="http://placehold.it/600x480&amp;text=five" class="img-responsive">
+								</div>
+								<div class="item" data-slide-number="5">
+									<img src="http://placehold.it/600x480&amp;text=six" class="img-responsive">
+								</div>
+							</div>
+							<!-- main slider carousel nav controls --> 
+							<a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
 
-    <div class="content-section-b">
+							<a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+						</div>
+					</div>
+					<div class="col-md-4 facilities">
+					<p>
+					This is a home with your own private entrance, bedroom, living room, and bath. 
+					</p>
+					<h4>
+					Home facilities:
+					</h4>
+					<p>
+					Balcony, View, Terrace, TV, Cable Channels, Flat-screen TV, Iron, Ironing Facilities, Seating Area, Washing Machine, Heating, Soundproofing, Tile/Marble floor, Hardwood/Parquet floors, Wardrobe/Closet, Bath, Hairdryer, Free toiletries, Toilet, Bathroom, Bath or Shower, Toilet paper, Tea/Coffee Maker, Kitchenette, Refrigerator, Dishwasher, Kitchen, Dining area, Electric kettle, Kitchenware, Oven, Stovetop, Dining table, Towels, Linen.
+					</p>
+					</div>
+				</div>
+				<div class="row">
+					<!-- thumb navigation carousel -->
+					<div class="col-md-12 hidden-sm hidden-xs" id="slider-thumbs">
+						
+						<!-- thumb navigation carousel items -->
+						<ul class="list-inline">
+						  <li> <a id="carousel-selector-0" class="selected">
+							<img src="http://placehold.it/80x60&amp;text=one" class="img-responsive">
+						  </a></li>
+						  <li> <a id="carousel-selector-1">
+							<img src="http://placehold.it/80x60&amp;text=two" class="img-responsive">
+						  </a></li>
+						  <li> <a id="carousel-selector-2">
+							<img src="http://placehold.it/80x60&amp;text=three" class="img-responsive">
+						  </a></li>
+						  <li> <a id="carousel-selector-3">
+							<img src="http://placehold.it/80x60&amp;text=four" class="img-responsive">
+						  </a></li>
+						  <li> <a id="carousel-selector-4">
+							<img src="http://placehold.it/80x60&amp;text=five" class="img-responsive">
+						  </a></li>
+						  <li> <a id="carousel-selector-5">
+							<img src="http://placehold.it/80x60&amp;text=six" class="img-responsive">
+						  </a></li>
+						</ul>
+					</div>
+				</div>
+			<script type="text/javascript">
+				$('#myCarousel').carousel({
+					interval: 4000
+				});
 
+				// handles the carousel thumbnails
+				$('[id^=carousel-selector-]').click( function(){
+				  var id_selector = $(this).attr("id");
+				  var id = id_selector.substr(id_selector.length -1);
+				  id = parseInt(id);
+				  $('#myCarousel').carousel(id);
+				  $('[id^=carousel-selector-]').removeClass('selected');
+				  $(this).addClass('selected');
+				});
+
+				// when the carousel slides, auto update
+				$('#myCarousel').on('slid', function (e) {
+				  var id = $('.item.active').data('slide-number');
+				  id = parseInt(id);
+				  $('[id^=carousel-selector-]').removeClass('selected');
+				  $('[id=carousel-selector-'+id+']').addClass('selected');
+				});
+			</script>
+		  </div>
+		  <div class="modal-footer">
+			<div class="row">
+				<div class="col-md-4">
+					<p style="margin-top:7px;">Ceck availability now:</p>
+				</div>
+				<div class="col-md-3" id="arrival-modal">
+					<div class="input-group date">
+					  <input type="text" class="form-control" placeholder="Arrival">
+					  <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+					</div>
+				</div>
+				<script type="text/javascript">
+					$('#arrival-modal .input-group.date').datepicker({
+						autoclose:true
+					});
+				</script>
+				<div class="col-md-3" id="departure-modal">
+					<div class="input-group date">
+					  <input type="text" class="form-control" placeholder="Departure">
+					  <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+					</div>
+				</div>
+				<script type="text/javascript">
+					$('#departure-modal .input-group.date').datepicker({
+						autoclose:true
+					});
+				</script>
+				<div class="col-md-2">
+					<button href="#" class="btn btn-default"><i class="fa fa-search fa-fw"></i> <span class="check-btn">Check</span></button>
+				</div>
+		  </div>
+	  </div>
+	</div>
+  </div>
+</div>
+	
+	
+	<div class="content-section-a post-left">
         <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Amazing Home In Dallas #2</h2>
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur corporis at explicabo nulla dolore necessitatibus doloremque exercitationem sequi dolorem architecto perferendis quas aperiam debitis dolor soluta!</p>
+					<button class="btn btn-success btn-lg" data-toggle="modal" data-target="#aboutHome2">View more</button>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" src="img/house.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="content-section-b post-right">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
                     <hr class="section-heading-spacer">
@@ -154,17 +303,11 @@
                     <img class="img-responsive" src="img/near.png" alt="">
                 </div>
             </div>
-
         </div>
-        <!-- /.container -->
-
     </div>
-    <!-- /.content-section-b -->
 
-    <div class="content-section-a">
-
+    <div class="content-section-a post-left">
         <div class="container">
-
             <div class="row">
                 <div class="col-lg-5 col-sm-6">
                     <hr class="section-heading-spacer">
@@ -178,16 +321,11 @@
             </div>
 
         </div>
-        <!-- /.container -->
-
     </div>
-    <!-- /.content-section-a -->
 
 	<a  name="contact"></a>
-    <div class="banner">
-
+    <div class="banner post">
         <div class="container">
-
             <div class="row">
                 <div class="col-lg-6">
                     <h2>Contact to us:</h2>
@@ -202,10 +340,7 @@
             </div>
 
         </div>
-        <!-- /.container -->
-
     </div>
-    <!-- /.banner -->
 
     <!-- Footer -->
     <footer>
@@ -234,7 +369,37 @@
             </div>
         </div>
     </footer>
+<script type="text/javascript" src="js/viewportchecker.js"></script>
+<style type="text/css">
+  @-ms-viewport {
+	width: device-width;
+	}
+</style>
+<script type="text/javascript">
 
+	(function() {
+	  if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+		var msViewportStyle = document.createElement("style");
+		msViewportStyle.appendChild(
+		  document.createTextNode("@-ms-viewport{width:auto!important}")
+		);
+		document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+	  }
+	})();
+	
+	$('.post').addClass("hidden-animate").viewportChecker({
+	   classToAdd: 'visible-animate animated fadeInDown', // Class to add to the elements when they are visible
+	   offset: 100    
+	});
+	$('.post-left').addClass("hidden-animate").viewportChecker({
+	   classToAdd: 'visible-animate animated bounceInLeft', // Class to add to the elements when they are visible
+	   offset: 300    
+	}); 
+	$('.post-right').addClass("hidden-animate").viewportChecker({
+	   classToAdd: 'visible-animate animated bounceInRight', // Class to add to the elements when they are visible
+	   offset: 300    
+	}); 
+</script>
     
 </body>
 
