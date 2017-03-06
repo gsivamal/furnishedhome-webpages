@@ -53,6 +53,10 @@ a.list-group-item.active small {
     min-width: 100%;   
 }
 
+.list-group-item-text {
+    font-size: 15px;;
+}
+
 .book-date {
 	max-width:250px;
 	margin: auto;
